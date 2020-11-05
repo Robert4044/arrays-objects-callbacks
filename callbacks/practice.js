@@ -84,18 +84,19 @@ multiply(4, 3, function (answer) {
   If the name does not exist, invoke the callback with false as the argument.
 */
 
+var army = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 function contains(array, name, cb) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === name) {
             return cb(true);
-        } else {
-            return cb(false);
         }
     }
+    return cb(false);
 }
 
 // Do not edit the code below.
-contains(names, 'Colt', function (result) {
+contains(army, 'Colt', function (result) {
     if (result === true) {
         console.log('Colt is in the array');
     } else {
@@ -113,13 +114,13 @@ contains(names, 'Colt', function (result) {
 
 function uniq(arr, cb) {
     for (let i = 0; i < arr.length; i++) {
-        console.log('first loop', arr[i]);
+        // console.log('first loop', arr[i]);
         for (j = i + 1; j < arr.length; j++) {
-            console.log('Second loop', arr[j]);
+            // console.log('Second loop', arr[j]);
             if (arr[i] === arr[j]) {
                 arr.splice(i, 1);
                 i--;
-                break;
+                // break;
             }
         }
     }

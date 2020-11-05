@@ -86,7 +86,6 @@ function evenFinder(nums) {
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] % 2 === 0) {
             evenNums.push(nums[i]);
-        } else {
         }
     }
     return evenNums;
